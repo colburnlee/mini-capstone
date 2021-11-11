@@ -127,3 +127,6 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Google Sheet Credential
+dollar-pairs-f7df709cc2b7.json
