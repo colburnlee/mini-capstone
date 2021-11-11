@@ -15,4 +15,4 @@ The API provided by the 0x protocol ([more information](https://0x.org/docs/api)
 
 Full data set available via [Google Sheets](https://docs.google.com/spreadsheets/d/1hUwgdLyBYbSbduUKBS9PH-Q3_7TY6ty3VAF3GcC20XI/edit?usp=sharing)
 
-![Graph](/screenshots/Combined_Arbs.png "Click for data set")<br>*Data output example*</br> 
+![Graph](/screenshots/Combined_Arbs.png "Click the link above for data set")<br>*Data output example*</br> 
