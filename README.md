@@ -7,7 +7,7 @@ Defi's explosive growth has fueled the contstruction of many automated market ma
 This project uses the API provided by the 0x protocol (more informaton [here](https://0x.org/docs/api)) to search for the best price available over multiple protocols (Ethereum, Polygon, Binance Smart Chain, and the Fantom Network) at a given time (0x searches 30+ AMMs alone on the Ethereum network) to find the maximum price difference to execute the same trade across each.
 
 <figure class="video_container">
-<iframe width="778" height="481" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTGt3qx3k9ijGYP0Brifwba0HU9ebmoGw5PH1oT-8OGWnZS_bJBIj0XxNmLTBWpf16BCtjA630Lt_KD/pubchart?oid=2071298494&amp;format=interactive"></iframe>
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTGt3qx3k9ijGYP0Brifwba0HU9ebmoGw5PH1oT-8OGWnZS_bJBIj0XxNmLTBWpf16BCtjA630Lt_KD/pubchart?oid=2071298494&amp;format=interactive"></iframe>
 </figure>
 
 
