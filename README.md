@@ -17,4 +17,4 @@ The API provided by the 0x protocol ([more information](https://0x.org/docs/api)
 
   
 
-![Graph](/screenshots/Combined_Arbs.png)<br>*Data output example*</br>
+[![Graph](/screenshots/Combined_Arbs.png "Click for data set")<br>*Data output example. Click on the chart to see more.*</br>][https://docs.google.com/spreadsheets/d/1hUwgdLyBYbSbduUKBS9PH-Q3_7TY6ty3VAF3GcC20XI/edit?usp=sharing]
