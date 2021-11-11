@@ -1,5 +1,21 @@
-# mini-capstone
-# My test markdown file
+# Decentralized Finance (DeFi) Arbitrage Opportunities
+---
+[Image](/screenshots/DEFI_TVL.png)
+> Image courtesy defillama.com
+
+Defi's explosive growth has fueled the contstruction of many automated market makers (AMMs) that are fully autonomous trading mechanisms that have no centralized control over price making (aside from market force). [Here](https://www.coindesk.com/learn/2021/08/20/what-is-an-automated-market-maker/#:~:text=An%20automated%20market%20maker%20(AMM,how%20automated%20market%20makers%20work.) is an article that explains how they function and why they are important to the growing landscape of DeFi. 
+
+This project uses the API provided by the 0x protocol (more informaton [here](https://0x.org/docs/api)) to search for the best price available over multiple protocols (Ethereum, Polygon, Binance Smart Chain, and the Fantom Network) at a given time (0x searches 30+ AMMs alone on the Ethereum network) to find the maximum price difference to execute the same trade across each.
+
+<iframe width="778" height="481" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTGt3qx3k9ijGYP0Brifwba0HU9ebmoGw5PH1oT-8OGWnZS_bJBIj0XxNmLTBWpf16BCtjA630Lt_KD/pubchart?oid=2071298494&amp;format=interactive"></iframe>
+
+
+
+
+
+
+
+
 ## Header 2
 ### Header 3
 ---
