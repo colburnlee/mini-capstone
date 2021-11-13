@@ -11,16 +11,15 @@ load_dotenv
 def dict_init(buyToken, sellToken):
     """Instantiates output dictionary"""
     now = datetime.datetime.now()
-    output_dict = {
-    'Pair': f'{buyToken}/{sellToken}',
-    'Time': f'{now}',
-}
-    return output_dict
+    return     {
+        'Pair': f'{buyToken}/{sellToken}',
+        'Time': f'{now}',
+    }
 
 def price_request(network, buyToken, sellToken, sellAmount, decimals="00000000000000000"):
     """Returns JSON response for 0x price aggregator lookup. Match decimals to sellToken value in its token contract - default value is 18"""
     if network.lower() != "ethereum":
-        
+
         if network.lower() == 'fantom': # only on the fantom chain is tether (USDT) called fUSDT. It has 6 decimals. (decimals="00000")
             if buyToken == 'USDT':
                 buyToken = 'fUSDT'
@@ -34,14 +33,13 @@ def price_request(network, buyToken, sellToken, sellAmount, decimals="0000000000
             elif sellToken == 'USDT':
                 sellToken = 'BUSDT'
                 decimals="00000000000000000"
-        
-        
+
+
         url = f"https://{network}.api.0x.org/swap/v1/quote?buyToken={buyToken}&sellToken={sellToken}&sellAmount={sellAmount}{decimals}"
 
     else:
         url = f"https://api.0x.org/swap/v1/quote?buyToken={buyToken}&sellToken={sellToken}&sellAmount={sellAmount}{decimals}"
-    response = requests.request("GET", url).json()
-    return response
+    return requests.request("GET", url).json()
 
 def price_eval(response, dictionary, network):
     """Takes raw JSON 0x response to add dicitonary entries for best price opportunities"""
@@ -60,8 +58,8 @@ def price_eval(response, dictionary, network):
     if sources:
         for item in sources:
             if item['proportion'] == "1":
-                source = item['name']       
-    elif not sources:
+                source = item['name']
+    else:
         source = False
     dictionary[f'{network} network AMM'] = source
     # print(f'{network} network best price: ${price} from: {source}')  
@@ -120,14 +118,12 @@ def dictionary_to_google(dictionary, json_file, sheet=0):
     return
 
 
-counter = 0
-
-while counter < 100000:
+for _ in range(100000):
     ################ VARIABLES - DAI/USDC ############################
     all_networks = ['ethereum', 'bsc', 'polygon', 'fantom']
     querey_buyToken = "DAI"
     querey_sellToken = "USDC"
-    querey_amount = "1000"  
+    querey_amount = "1000"
     querey_sellToken_decimals = "00000" # only fill if NOT 18 decimals.
     json_gsheet_credential = 'dollar-pairs-f7df709cc2b7.json'
     gsheet_number = 0
@@ -216,7 +212,6 @@ while counter < 100000:
     print(f"Complete at {output_dict['Time']} \n")
     time.sleep(15)
 
-     ################ VARIABLES - USDT/WETH ############################
     all_networks = ['ethereum', 'bsc', 'polygon', 'fantom']
     querey_buyToken = "USDT"
     querey_sellToken = "WETH"
@@ -261,6 +256,3 @@ while counter < 100000:
     dictionary_to_google(output_dict, json_gsheet_credential, gsheet_number)
     print(f"Complete at {output_dict['Time']} \nData avalable at 'https://docs.google.com/spreadsheets/d/1hUwgdLyBYbSbduUKBS9PH-Q3_7TY6ty3VAF3GcC20XI/edit?usp=sharing'")
     time.sleep(15)
-    
-
-    counter +=1
